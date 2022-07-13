@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"> <!-- displays site properly based on user's device -->
+
+  <link rel="icon" type="image/png" sizes="32x32" href="./images/favicon-32x32.png">
+  <link rel="stylesheet" href="./css/style.css">
+  
+  <title>Frontend Mentor | Interactive pricing component</title>
+
+  <!-- Feel free to remove these styles or customise in your own stylesheet 👍 -->
+  <style>
+    .attribution { font-size: 11px; text-align: center; }
+    .attribution a { color: hsl(228, 45%, 44%); }
+  </style>
+</head>
+<body>
+  <main class="main_container">
+    <div class="interactive_title pd_title">
+      <h3>Simple, traffic-based pricing</h3>
+      <p>Sign-up for our 30-day trial. No credit card required. </p>
+    </div>
+
+    <div id="square_home" class="square_box mg_box">
+      <div class="square_container">
+
+      <div class="square_top">
+
+        <div class="grid_selection">
+
+          <div class="views_title1">
+            <p class="page"><span class="number_pageviews"></span>  Pageviews</p>
+          </div>
+
+          <div class="views_title2">
+            <p><span class="bill_icon">$</span><span class="bill"></span>/<span class="data_time">month</span></p>
+          </div>
+
+          <div id="range_id" class="range_bar mgr_bt">
+            <input type="range"  id="rate_views" min="0" max="100" value="50">
+          </div>
+          
+        </div>
+
+        <div class="select_billing">
+          <div class="select_content">
+            <p class="pd_select">Monthly Billing</p>
+            <label  class="my_radio" for="switch_radio">
+               <input type="checkbox"  id="switch_radio" class="pd_select">
+               <div id="toggle_wrapper"></div>
+            </label>
+            <p class="pd_select">Yearly Billing</p>
+            <div class="discount">
+              <input type="button" value="25% discount" class="discount_btn"></div>
+          </div>
+        </div>
+
+        <div class="square_bottom mgb_top">
+          <div class="access_granted">
+            <div class="access pdac_bt">
+              <span class="mgs_rt"><img src="./images/icon-check.svg" alt="oops"></span>
+              <p> Unlimited websites</p>
+            </div>
+            <div class="access pdac_bt">
+              <span class="mgs_rt"><img src="./images/icon-check.svg" alt="oops"></span>
+              <p>100% data ownership</p>
+            </div>
+            <div class="access pdac_bt">
+              <span class="mgs_rt"><img src="./images/icon-check.svg" alt="oops"></span>
+              <p>Email reports</p>
+            </div>
+          </div>
+          <div class="start_trial">
+            <a href="#" class="dive_in color-dive"> Start my trial</a>
+          </div>
+        </div>
+      </div>  
+      </div>
+    </div>  
+  </main>
+
+  <footer>
+    <div class="attribution">
+      Challenge by <a href="https://www.frontendmentor.io?ref=challenge" target="_blank">Frontend Mentor</a>. 
+      Coded by <a href="#">Your Name Here</a>.
+    </div>
+  </footer>
+
+  <script src="./javascript/scripts.js"></script>
+
+</body>
+</html>
