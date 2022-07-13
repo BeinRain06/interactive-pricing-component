@@ -106,6 +106,7 @@ a{
   padding: 0 1.2em;
 }
 
+
 body{
   background: url('../images/bg-pattern.svg') no-repeat center center/cover;
   color: #7c7c7c;
@@ -301,6 +302,14 @@ body{
 .square_bottom .start_trial .dive_in:hover{
   background: var(--range-color-active);
 }
+
+
+/* footer */
+
+.attribution { font-size: 11px; text-align: center; }
+.attribution a { color: hsl(228, 45%, 44%); }
+
+/* animation style */
 
 @keyframes animeBtnTrial {
   0%{
