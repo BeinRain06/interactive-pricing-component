@@ -22,7 +22,7 @@ let keepBill ={
 };
 
 
-doc.addEventListener('click',ratioNumberViewsBill);
+doc.addEventListener('input',ratioNumberViewsBill);
 
 function ratioNumberViewsBill(){
   let n, m , k;
@@ -37,11 +37,12 @@ function ratioNumberViewsBill(){
    n=parseInt((m-k)/r);
    console.log(n);
    if(n===0 && rangeMonthYear.checked === false){
-     numberPageViews.textContent='10k';
+     numberPageViews.innerHTML=arrayViews[0];
      billCost.textContent= p0;
      keepBill.billAmountMonth = parseInt(p0);
      keepBill.billIndex = n;
    }else if(n===0 && rangeMonthYear.checked === true){
+    numberPageViews.innerHTML=arrayViews[n];
     p= p0;
     keepBill.billAmountMonth= parseInt(p);
     exYearBill = keepBill.billAmountMonth*12;
@@ -50,12 +51,13 @@ function ratioNumberViewsBill(){
     billCost.textContent=keepBill.billAmountYear;
    }
    else if(n!== 0 && rangeMonthYear.checked === false) {
-    numberPageViews.textContent= arrayViews[n];
+    numberPageViews.innerHTML=arrayViews[n];
     p= p0 + Math.pow(2, n+1);
     billCost.textContent=p;
     keepBill.billAmountMonth= parseInt(p);
     keepBill.billIndex = n;
    }else if(n!== 0 && rangeMonthYear.checked === true){
+    numberPageViews.innerHTML=JSON.stringify();
     p= p0 + Math.pow(2, n+1);
     keepBill.billAmountMonth= parseInt(p);
     exYearBill = keepBill.billAmountMonth*12;
@@ -66,7 +68,7 @@ function ratioNumberViewsBill(){
   }
 }
 
-wrapperRange.addEventListener('input', activateBillAmountOrYear);
+wrapperRange.addEventListener('click', activateBillAmountOrYear);
 
 function activateBillAmountOrYear(){
   let discountApply, exYearBill;
