@@ -66,7 +66,7 @@ function ratioNumberViewsBill(){
   }
 }
 
-wrapperRange.addEventListener('click', activateBillAmountOrYear);
+wrapperRange.addEventListener('input', activateBillAmountOrYear);
 
 function activateBillAmountOrYear(){
   let discountApply, exYearBill;
@@ -94,8 +94,7 @@ function activateBillAmountOrYear(){
 myTrial.addEventListener('click', animateTrialBtn);
 
  function animateTrialBtn(){
- 
-   myTrial.style.animation= 'animeBtnTrial 800ms forwards ease-in-out';
+   myTrial.style.animation= 'animeBtnTrial 1200ms forwards ease-in-out';
   
  }
 

@@ -70,9 +70,6 @@
   background: var(--range-color);
 }
 
-.visible_mobile{
-  display: none;
-}
 
 a{
   text-decoration: none;
@@ -215,6 +212,7 @@ body{
   width: 100%;
   height: 7px;
   border-radius: 24px;
+  cursor: pointer;
   
 }
 
@@ -231,6 +229,7 @@ body{
   background: var(--range-color);
   cursor: pointer;
   box-shadow: 2px 3px 14px 0 var(--range-color);
+  cursor: pointer;
 }
 
 #rate_views::-webkit-slider-thumb::before{
@@ -306,8 +305,16 @@ body{
 
 /* footer */
 
-.attribution { font-size: 11px; text-align: center; }
-.attribution a { color: hsl(228, 45%, 44%); }
+
+
+.attribution { 
+  font-size: 10px; 
+  text-align: center;
+  padding-top: 1em; 
+  margin: 0 2em ;}
+.attribution a { 
+  color: hsl(228, 45%, 44%); 
+}
 
 /* animation style */
 
@@ -538,10 +545,21 @@ body{
 /* for Mobile screen width:600px */
 
 @media (max-width:600px) {
+  
+  body{
+    font-size: 1.4em;
+  }
+
+  .main_container{
+    max-width: 96vw;
+    height: 90vh;
+    text-align: center;
+    margin: 3rem auto;
+  }
 
   #square_home{
     width: 100%;
-    max-height: 60%;
+    height: 92%;
     padding: 2em;
   }
 
@@ -620,7 +638,7 @@ body{
   }
 
   .pd_select{
-    padding: 0 0.6em;
+    padding: 0 1em;
   }
   .square_top .select_billing .discount_btn{
     top: 0;
@@ -640,8 +658,14 @@ body{
     justify-content: center;
   }
 
+  .square_bottom .access_granted{
+    display: flex;
+    flex-direction: column;
+    margin: 0 auto;
+  }
+
   .square_bottom .access_granted .access{
-    font-size: 0.7em;
+    font-size: 0.6em;
   }
 
   .square_bottom  .start_trial{
